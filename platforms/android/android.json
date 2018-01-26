@@ -1,0 +1,65 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.startrack"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.phonegap.startrack"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phonegap.startrack"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phonegap.startrack"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-console": "1.0.7",
+        "cordova-plugin-statusbar": "1.0.1",
+        "cordova-plugin-splashscreen": "3.1.0"
+    }
+}
